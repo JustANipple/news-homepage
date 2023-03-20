@@ -4,4 +4,42 @@
 
 body {
     font-family: var(--ff-Inter);
+    background-color: var(--bg);
+}
+
+/* ====== Main ====== */
+.container {
+    margin: 1.75rem 1rem;
+}
+
+/* ====== Navigation bar ====== */
+.navigation-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+
+    .logo {
+        max-width: 3rem;
+    }
+
+    .icon {
+        z-index: 1;
+    }
+
+    .options {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        max-width: 65vw;
+        margin-inline-start: auto;
+        padding-inline-start: 1.625rem;
+        background-color: var(--bg);
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        height: 100vh;
+        padding-block-start: 9.5rem;
+    }
 }
