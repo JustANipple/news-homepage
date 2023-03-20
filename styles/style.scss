@@ -1,2 +1,7 @@
 @use "reset";
 @use "customProperties";
+@use "desktopView";
+
+body {
+    font-family: var(--ff-Inter);
+}

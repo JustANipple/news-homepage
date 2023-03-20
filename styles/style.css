@@ -51,4 +51,8 @@ p, h1, h2, h3, h4, h5, h6 {
   --fw-reg: 400;
   --fw-bold: 700;
   --fw-extraBold: 800;
+}
+
+body {
+  font-family: var(--ff-Inter);
 }/*# sourceMappingURL=style.css.map */
