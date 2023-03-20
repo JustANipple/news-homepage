@@ -1,0 +1,32 @@
+.masthead {
+    /* ====== Custom properties ======*/
+    /* font family of text */
+    --ff: var(--ff-Inter);
+    /* color of title text */
+    --title-clr: var(--news-bg);
+    /* font size of desc text */
+    --fs: var(--fs-par);
+    /* font color for desc text */
+    --desc-txt: var(--nav-options);
+    /* font weight of title */
+    --fw: var(--fw-extraBold);
+
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+
+    .main-img {
+        background-image: url(../assets/images/image-web-3-mobile.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .content {
+        display: grid;
+        font-family: var(--ff);
+
+        .title {
+            font-size: calc(var(--fs) * 2.5);
+            font-weight: var(--fw);
+        }
+    }
+}

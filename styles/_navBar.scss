@@ -1,10 +1,16 @@
 .nav-bar {
-    /* custom properties */
+    /* ====== Custom properties ======*/
+    /* background of the navBar */
     --back-clr: var(--bg);
+    /* color of nav options text */
     --dark-layout-clr: var(--news-bg);
+    /* font family of nav options text */
     --ff: var(--ff-Inter);
+    /* font size of nav options text */
     --fs: var(--fs-par);
+    /* color for hovering state*/
     --active-clr: var(--news-headings);
+    /* font color for desktop view */
     --a-desktop-clr: var(--nav-options);
 
     display: flex;
