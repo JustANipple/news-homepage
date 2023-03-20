@@ -51,6 +51,9 @@ p, h1, h2, h3, h4, h5, h6 {
   --fw-reg: 400;
   --fw-bold: 700;
   --fw-extraBold: 800;
+  /* Spacing */
+  --cont-margin-block: 1.75rem;
+  --cont-margin-inline: 1rem;
 }
 
 body {
@@ -60,7 +63,17 @@ body {
 
 /* ====== Main ====== */
 .container {
-  margin: 1.75rem 1rem;
+  margin: var(--cont-margin-block) var(--cont-margin-inline);
+}
+
+.darker-layer {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  transform: translate(calc(var(--cont-margin-inline) * -1), calc(var(--cont-margin-block) * -1));
+  background-color: black;
+  opacity: 0.4;
+  display: none;
 }
 
 /* ====== Navigation bar ====== */
@@ -72,7 +85,13 @@ body {
 .navigation-bar .logo {
   max-width: 3rem;
 }
-.navigation-bar .icon {
+.navigation-bar .menu {
+  border: none;
+  background-color: inherit;
+  height: 2rem;
+}
+.navigation-bar .menu .icon {
+  position: relative;
   z-index: 1;
 }
 .navigation-bar .options {
@@ -89,4 +108,11 @@ body {
   gap: 1.5rem;
   height: 100vh;
   padding-block-start: 9.5rem;
+  display: none;
+}
+.navigation-bar .options a {
+  text-decoration: none;
+  color: var(--news-bg);
+  font-size: calc(var(--fs-par) * 1.125);
+  width: fit-content;
 }/*# sourceMappingURL=style.css.map */
