@@ -148,6 +148,7 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 .masthead .content .read-more {
   display: grid;
+  place-content: center;
   row-gap: 1.5rem;
   font-size: var(--fs-par);
 }
@@ -164,7 +165,7 @@ p, h1, h2, h3, h4, h5, h6 {
   font-size: calc(var(--fs-par) / 1.125);
   font-weight: var(--fw-bold);
   letter-spacing: 0.25rem;
-  padding: 0.75rem 1.875rem;
+  padding: 1rem 1.875rem;
   cursor: pointer;
 }
 .masthead .content .read-more .btn:hover {
@@ -220,9 +221,20 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 .new .topics .article .title:hover {
   color: var(--news-headings);
+  cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
 .new .topics .article .desc {
   color: var(--num-headings);
   font-size: var(--fs-par);
+}
+
+@media screen and (min-width: 1000px) {
+  .news {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .masthead {
+    grid-column: 1/3;
+  }
 }/*# sourceMappingURL=style.css.map */

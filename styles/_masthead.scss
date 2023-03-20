@@ -23,6 +23,7 @@
 
         .read-more {
             display: grid;
+            place-content: center;
             row-gap: 1.5rem;
             font-size: var(--fs-par);
 
@@ -40,7 +41,7 @@
                 font-size: calc(var(--fs-par) / 1.125);
                 font-weight: var(--fw-bold);
                 letter-spacing: 0.25rem;
-                padding: 0.75rem 1.875rem;
+                padding: 1rem 1.875rem;
                 cursor: pointer;
 
                 &:hover {

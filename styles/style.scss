@@ -3,3 +3,15 @@
 @use "navBar";
 @use "masthead";
 @use "sideBar";
+
+@media screen and (min-width: 1000px) {
+    .news {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .masthead {
+        grid-column: 1/3;
+    }
+}
+
