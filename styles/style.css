@@ -1,4 +1,4 @@
-/*
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap"); /*
   Josh's Custom CSS Reset
   https://www.joshwcomeau.com/css/custom-css-reset/
 */
@@ -33,10 +33,6 @@ p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
 }
 
-@font-face {
-  font-family: "Inter";
-  src: url(../assets/fonts/Inter-VariableFont_slnt\,wght.ttf);
-}
 :root {
   /* Color */
   --bg: hsl(36, 100%, 99%);
@@ -52,116 +48,87 @@ p, h1, h2, h3, h4, h5, h6 {
   --fw-bold: 700;
   --fw-extraBold: 800;
   /* Spacing */
-  --cont-margin-block: 1.75rem;
-  --cont-margin-inline: 1rem;
 }
 
-@media screen and (min-width: 700px) {
-  body {
-    /* ====== Main ====== */
-    /* ====== Navigation bar ====== */
-  }
-  body .container {
-    margin: var(--cont-margin-block) var(--cont-margin-inline);
-  }
-  body .navigation-bar .logo {
-    max-width: unset;
-  }
-  body .navigation-bar .menu {
-    border: none;
-    background-color: inherit;
-    height: 2rem;
-    width: 2.5rem;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  body .navigation-bar .menu .icon {
-    position: relative;
-    z-index: 1;
-    display: none;
-  }
-  body .navigation-bar .options {
-    position: static;
-    display: flex;
-    flex-direction: row;
-    height: fit-content;
-    margin-inline-start: unset;
-    padding-block-start: unset;
-    padding-inline-start: unset;
-    max-width: unset;
-  }
-  body .navigation-bar .options a {
-    text-decoration: none;
-    color: var(--news-bg);
-    font-size: calc(var(--fs-par) * 1.125);
-    width: fit-content;
-  }
-  /* Body */
-} /* Media query */
-body {
-  font-family: var(--ff-Inter);
-  background-color: var(--bg);
-}
-
-/* ====== Main ====== */
-.container {
-  margin: var(--cont-margin-block) var(--cont-margin-inline);
-}
-
-.darker-layer {
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  transform: translate(calc(var(--cont-margin-inline) * -1), calc(var(--cont-margin-block) * -1));
-  background-color: var(--news-bg);
-  opacity: 0.4;
-  display: none;
-}
-
-/* ====== Navigation bar ====== */
-.navigation-bar {
+.nav-bar {
+  /* custom properties */
+  --back-clr: var(--bg);
+  --dark-layout-clr: var(--news-bg);
+  --ff: var(--ff-Inter);
+  --fs: var(--fs-par);
+  --active-clr: var(--news-headings);
+  --a-desktop-clr: var(--nav-options);
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-.navigation-bar .logo {
-  max-width: 3rem;
-}
-.navigation-bar .menu {
-  border: none;
-  background-color: inherit;
+  position: relative;
   height: 2rem;
-  width: 2.5rem;
-  padding: 0;
+}
+.nav-bar .darker-layer {
+  background-color: var(--dark-layout-clr);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: 100vh;
+  width: 100vw;
+  opacity: 40%;
+  display: none;
+}
+.nav-bar .logo {
+  width: 3rem;
+}
+.nav-bar .dropdown-btn {
+  background-color: var(--back-clr);
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.navigation-bar .menu .icon {
-  position: relative;
+  border: none;
+  padding: 0;
   z-index: 1;
 }
-.navigation-bar .options {
+.nav-bar .options {
+  background-color: var(--back-clr);
   position: absolute;
-  left: 0;
-  right: 0;
   top: 0;
-  max-width: 65vw;
-  margin-inline-start: auto;
-  padding-inline-start: 1.625rem;
-  background-color: var(--bg);
+  right: 0;
+  height: 100vh;
+  padding-block-start: 9rem;
+  padding-inline: 1.5rem 8.5rem;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  height: 100vh;
-  padding-block-start: 9.5rem;
   display: none;
 }
-.navigation-bar .options a {
+.nav-bar .options a {
+  font-family: var(--ff);
+  font-size: calc(var(--fs) * 1.2);
   text-decoration: none;
-  color: var(--news-bg);
-  font-size: calc(var(--fs-par) * 1.125);
+  color: var(--dark-layout-clr);
   width: fit-content;
+}
+.nav-bar .options a:hover {
+  color: var(--active-clr);
+  transition: all 0.2s ease-in-out;
+}
+
+@media screen and (min-width: 700px) {
+  .nav-bar .darker-layer {
+    display: none;
+  }
+  .nav-bar .dropdown-btn {
+    display: none;
+  }
+  .nav-bar .options {
+    position: unset;
+    height: unset;
+    padding-block-start: unset;
+    padding-inline: unset;
+    display: flex;
+    flex-direction: row;
+    gap: 2.5rem;
+  }
+  .nav-bar .options a {
+    color: var(--a-desktop-clr);
+    font-size: var(--fs);
+  }
 }/*# sourceMappingURL=style.css.map */

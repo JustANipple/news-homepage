@@ -1,0 +1,94 @@
+.nav-bar {
+    /* custom properties */
+    --back-clr: var(--bg);
+    --dark-layout-clr: var(--news-bg);
+    --ff: var(--ff-Inter);
+    --fs: var(--fs-par);
+    --active-clr: var(--news-headings);
+    --a-desktop-clr: var(--nav-options);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    height: 2rem;
+
+    .darker-layer {
+        background-color: var(--dark-layout-clr);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        height: 100vh;
+        width: 100vw;
+        opacity: 40%;
+        display: none;
+    }
+
+    .logo {
+        width: 3rem;
+    }
+
+    .dropdown-btn {
+        background-color: var(--back-clr);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        padding: 0;
+        z-index: 1;
+    }
+
+    .options {
+        background-color: var(--back-clr);
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        padding-block-start: 9rem;
+        padding-inline: 1.5rem 8.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        display: none;
+
+        a {
+            font-family: var(--ff);
+            font-size: calc(var(--fs) * 1.2);
+            text-decoration: none;
+            color: var(--dark-layout-clr);
+            width: fit-content;
+
+            &:hover {
+                color: var(--active-clr);
+                transition: all .2s ease-in-out;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 700px) { 
+    .nav-bar {
+        .darker-layer {
+            display: none;
+        }
+
+        .dropdown-btn {
+            display: none;
+        }
+        
+        .options {
+            position: unset;
+            height: unset;
+            padding-block-start: unset;
+            padding-inline: unset;
+            display: flex;
+            flex-direction: row;
+            gap: 2.5rem;
+
+            a {
+                color: var(--a-desktop-clr);
+                font-size: var(--fs);
+            }
+        }
+    }
+}

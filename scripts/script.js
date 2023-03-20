@@ -1,6 +1,6 @@
 // Variables
-const menuBtn = document.querySelector(".navigation-bar .menu");
-const icon = document.querySelector(".navigation-bar .menu .icon");
+const menuBtn = document.querySelector(".dropdown-btn");
+const icon = document.querySelector(".dropdown-btn img");
 const darkLayer = document.querySelector(".darker-layer");
 const menu = document.querySelector(".options");
 
