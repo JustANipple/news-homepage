@@ -218,6 +218,10 @@ p, h1, h2, h3, h4, h5, h6 {
 .new .topics .article:not(:last-child) {
   border-bottom: 1px solid var(--bg);
 }
+.new .topics .article .title:hover {
+  color: var(--news-headings);
+  transition: all 0.3s ease-in-out;
+}
 .new .topics .article .desc {
   color: var(--num-headings);
   font-size: var(--fs-par);

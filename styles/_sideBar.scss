@@ -21,6 +21,11 @@
                 border-bottom: 1px solid var(--bg);
             }
 
+            .title:hover {
+                color: var(--news-headings);
+                transition: all .3s ease-in-out;
+            }
+
             .desc {
                 color: var(--num-headings);
                 font-size: var(--fs-par);
