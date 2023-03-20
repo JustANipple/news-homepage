@@ -1,0 +1,23 @@
+@font-face {
+    font-family: "Inter";
+    src: url(../assets/fonts/Inter-VariableFont_slnt\,wght.ttf);
+}
+
+:root {
+
+    /* Color */
+    --bg: hsl(36, 100%, 99%);
+    --nav-options: hsl(236, 13%, 42%);
+    --read-btn: hsl(5, 85%, 63%);
+    --news-headings: hsl(35, 77%, 62%);
+    --news-bg: hsl(240, 100%, 5%);
+    --num-headings: hsl(233, 8%, 79%);
+
+    /* Font */
+    --ff-Inter: "Inter", sans-serif;
+    --fs-par: 0.938rem;
+    --fw-reg: 400;
+    --fw-bold: 700;
+    --fw-extraBold: 800;
+    
+}

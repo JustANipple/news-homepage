@@ -1,0 +1,54 @@
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url(../assets/fonts/Inter-VariableFont_slnt\,wght.ttf);
+}
+:root {
+  /* Color */
+  --bg: hsl(36, 100%, 99%);
+  --nav-options: hsl(236, 13%, 42%);
+  --read-btn: hsl(5, 85%, 63%);
+  --news-headings: hsl(35, 77%, 62%);
+  --news-bg: hsl(240, 100%, 5%);
+  --num-headings: hsl(233, 8%, 79%);
+  /* Font */
+  --ff-Inter: "Inter", sans-serif;
+  --fs-par: 0.938rem;
+  --fw-reg: 400;
+  --fw-bold: 700;
+  --fw-extraBold: 800;
+}/*# sourceMappingURL=style.css.map */
