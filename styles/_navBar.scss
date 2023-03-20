@@ -1,18 +1,4 @@
 .nav-bar {
-    /* ====== Custom properties ======*/
-    /* background of the navBar */
-    --back-clr: var(--bg);
-    /* color of nav options text */
-    --dark-layout-clr: var(--news-bg);
-    /* font family of nav options text */
-    --ff: var(--ff-Inter);
-    /* font size of nav options text */
-    --fs: var(--fs-par);
-    /* color for hovering state*/
-    --active-clr: var(--news-headings);
-    /* font color for desktop view */
-    --a-desktop-clr: var(--nav-options);
-
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -20,7 +6,7 @@
     height: 2rem;
 
     .darker-layer {
-        background-color: var(--dark-layout-clr);
+        background-color: var(--news-bg);
         position: absolute;
         top: 0;
         bottom: 0;
@@ -35,7 +21,7 @@
     }
 
     .dropdown-btn {
-        background-color: var(--back-clr);
+        background-color: var(--bg);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -45,7 +31,7 @@
     }
 
     .options {
-        background-color: var(--back-clr);
+        background-color: var(--bg);
         position: absolute;
         top: 0;
         right: 0;
@@ -58,21 +44,21 @@
         display: none;
 
         a {
-            font-family: var(--ff);
-            font-size: calc(var(--fs) * 1.2);
+            font-family: var(--ff-Inter);
+            font-size: calc(var(--fs-par) * 1.2);
             text-decoration: none;
-            color: var(--dark-layout-clr);
+            color: var(--news-bg);
             width: fit-content;
 
             &:hover {
-                color: var(--active-clr);
+                color: var(--news-headings);
                 transition: all .2s ease-in-out;
             }
         }
     }
 }
 
-@media screen and (min-width: 700px) { 
+@media screen and (min-width: 500px) { 
     .nav-bar {
         .darker-layer {
             display: none;
@@ -92,8 +78,8 @@
             gap: 2.5rem;
 
             a {
-                color: var(--a-desktop-clr);
-                font-size: var(--fs);
+                color: var(--nav-options);
+                font-size: var(--fs-par);
             }
         }
     }

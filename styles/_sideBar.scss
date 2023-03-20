@@ -1,0 +1,30 @@
+.new {
+    background-color: var(--news-bg);
+    font-family: var(--ff-Inter);
+    color: var(--bg);
+    display: grid;
+    padding: 1.5rem;
+
+    h2 {
+        font-size: calc(var(--fs-par) * 2);
+        color: var(--news-headings);
+    }
+
+    .topics {
+
+        .article {
+            display: grid;
+            row-gap: 0.5rem;
+            padding-block: 2rem;
+
+            &:not(:last-child) {
+                border-bottom: 1px solid var(--bg);
+            }
+
+            .desc {
+                color: var(--num-headings);
+                font-size: var(--fs-par);
+            }
+        }
+    }
+}

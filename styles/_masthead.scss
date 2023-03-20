@@ -1,17 +1,6 @@
 .masthead {
-    /* ====== Custom properties ======*/
-    /* font family of text */
-    --ff: var(--ff-Inter);
-    /* color of title text */
-    --title-clr: var(--news-bg);
-    /* font size of desc text */
-    --fs: var(--fs-par);
-    /* font color for desc text */
-    --desc-txt: var(--nav-options);
-    /* font weight of title */
-    --fw: var(--fw-extraBold);
-
     display: grid;
+    row-gap: 1.5rem;
     grid-template-rows: 1fr 1fr;
 
     .main-img {
@@ -22,11 +11,76 @@
 
     .content {
         display: grid;
-        font-family: var(--ff);
+        row-gap: 1rem;
+        font-family: var(--ff-Inter);
 
         .title {
-            font-size: calc(var(--fs) * 2.5);
-            font-weight: var(--fw);
+            font-size: calc(var(--fs-par) * 2.75);
+            font-weight: var(--fw-extraBold);
+            color: var(--news-bg);
+            line-height: 1;
+        }
+
+        .read-more {
+            display: grid;
+            row-gap: 1.5rem;
+            font-size: var(--fs-par);
+
+            .desc {
+                color: var(--nav-options);
+                line-height: 1.625;
+            }
+
+            .btn {
+                background-color: var(--read-btn);
+                color: var(--bg);
+                text-transform: uppercase;
+                width: max-content;
+                border: none;
+                font-size: calc(var(--fs-par) / 1.125);
+                font-weight: var(--fw-bold);
+                letter-spacing: 0.25rem;
+                padding: 0.75rem 1.875rem;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: var(--news-bg);
+                    transition: all 0.3s ease-in-out;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 720px) {
+    .masthead {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1.65fr 1fr;
+
+        .main-img {
+            background-image: url(/assets/images/image-web-3-desktop.jpg);
+            grid-column: 1/-1;
+        }
+
+        .content {
+            grid-template-columns: 1fr 1fr;
+            grid-column: 1/-1;
+            column-gap: 3rem;
+
+            .title {
+                grid-column: 1;
+                font-size: calc(var(--fs-par) * 3.75);
+            }
+
+            .read-more {
+                grid-column: 2;
+                row-gap: 2.5rem;
+
+                .btn {
+                    letter-spacing: 0.3rem;
+                    padding-inline: 2rem;
+                }
+            }
         }
     }
 }
