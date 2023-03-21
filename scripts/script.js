@@ -19,5 +19,6 @@ function dropMenu() {
         darkLayer.style.display = "block";
         menu.style.display= "flex";
         document.body.style.overflow= "hidden";
+        window.scrollTo(0,0);
     }
 }
