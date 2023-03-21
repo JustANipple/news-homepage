@@ -13,9 +13,11 @@ function dropMenu() {
         icon.setAttribute("src", "assets/images/icon-menu.svg");
         darkLayer.style.display = "none";
         menu.style.display= "none";
+        document.body.style.overflow= "unset";
     } else {
         icon.setAttribute("src", "assets/images/icon-menu-close.svg");
         darkLayer.style.display = "block";
         menu.style.display= "flex";
+        document.body.style.overflow= "hidden";
     }
 }
