@@ -11,8 +11,8 @@
 
     .content {
         display: grid;
-        row-gap: 1rem;
         font-family: var(--ff-Inter);
+        row-gap: 1rem;
 
         .title {
             font-size: calc(var(--fs-par) * 2.75);
@@ -41,7 +41,7 @@
                 font-size: calc(var(--fs-par) / 1.125);
                 font-weight: var(--fw-bold);
                 letter-spacing: 0.25rem;
-                padding: 1rem 1.875rem;
+                padding: 0.825rem 1.875rem;
                 cursor: pointer;
 
                 &:hover {
@@ -57,6 +57,7 @@
     .masthead {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1.65fr 1fr;
+        row-gap: 2rem;
 
         .main-img {
             background-image: url(/assets/images/image-web-3-desktop.jpg);
@@ -75,7 +76,9 @@
 
             .read-more {
                 grid-column: 2;
-                row-gap: 2.5rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
 
                 .btn {
                     letter-spacing: 0.3rem;

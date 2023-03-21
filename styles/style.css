@@ -55,7 +55,8 @@ p, h1, h2, h3, h4, h5, h6 {
   justify-content: space-between;
   align-items: center;
   position: relative;
-  height: 2rem;
+  min-height: 2rem;
+  padding-top: 1.5rem;
 }
 .nav-bar .darker-layer {
   background-color: var(--news-bg);
@@ -69,6 +70,7 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 .nav-bar .logo {
   width: 3rem;
+  margin-inline-start: 1rem;
 }
 .nav-bar .dropdown-btn {
   background-color: var(--bg);
@@ -78,6 +80,7 @@ p, h1, h2, h3, h4, h5, h6 {
   border: none;
   padding: 0;
   z-index: 1;
+  margin-inline-end: 1rem;
 }
 .nav-bar .options {
   background-color: var(--bg);
@@ -105,6 +108,9 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 @media screen and (min-width: 500px) {
+  .nav-bar .logo {
+    width: unset;
+  }
   .nav-bar .darker-layer {
     display: none;
   }
@@ -137,8 +143,8 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 .masthead .content {
   display: grid;
-  row-gap: 1rem;
   font-family: var(--ff-Inter);
+  row-gap: 1rem;
 }
 .masthead .content .title {
   font-size: calc(var(--fs-par) * 2.75);
@@ -165,7 +171,7 @@ p, h1, h2, h3, h4, h5, h6 {
   font-size: calc(var(--fs-par) / 1.125);
   font-weight: var(--fw-bold);
   letter-spacing: 0.25rem;
-  padding: 1rem 1.875rem;
+  padding: 0.825rem 1.875rem;
   cursor: pointer;
 }
 .masthead .content .read-more .btn:hover {
@@ -177,6 +183,7 @@ p, h1, h2, h3, h4, h5, h6 {
   .masthead {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1.65fr 1fr;
+    row-gap: 2rem;
   }
   .masthead .main-img {
     background-image: url(/assets/images/image-web-3-desktop.jpg);
@@ -193,7 +200,9 @@ p, h1, h2, h3, h4, h5, h6 {
   }
   .masthead .content .read-more {
     grid-column: 2;
-    row-gap: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
   .masthead .content .read-more .btn {
     letter-spacing: 0.3rem;
@@ -205,19 +214,26 @@ p, h1, h2, h3, h4, h5, h6 {
   font-family: var(--ff-Inter);
   color: var(--bg);
   display: grid;
-  padding: 1.5rem;
+  padding-inline: 1.5rem;
+  padding-block: 2rem 0;
 }
 .new h2 {
   font-size: calc(var(--fs-par) * 2);
   color: var(--news-headings);
+  line-height: 1;
+}
+@media screen and (min-width: 700px) {
+  .new h2 {
+    font-size: calc(var(--fs-par) * 2.75);
+  }
 }
 .new .topics .article {
   display: grid;
   row-gap: 0.5rem;
-  padding-block: 2rem;
+  padding-block: 1.75rem;
 }
 .new .topics .article:not(:last-child) {
-  border-bottom: 1px solid var(--bg);
+  border-bottom: 1px solid var(--nav-options);
 }
 .new .topics .article .title:hover {
   color: var(--news-headings);
@@ -227,12 +243,89 @@ p, h1, h2, h3, h4, h5, h6 {
 .new .topics .article .desc {
   color: var(--num-headings);
   font-size: var(--fs-par);
+  line-height: 1.75;
+}
+
+.more {
+  grid-column: 1/-1;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  align-items: center;
+  row-gap: 2rem;
+  font-family: var(--ff-Inter);
+}
+@media screen and (min-width: 700px) {
+  .more {
+    grid-template-rows: unset;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 2rem;
+  }
+}
+.more .reviving,
+.more .top,
+.more .growth {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  column-gap: 1.5rem;
+  height: fit-content;
+}
+.more .reviving .text,
+.more .top .text,
+.more .growth .text {
+  display: grid;
+  row-gap: 0.5rem;
+}
+.more .reviving .text .number,
+.more .top .text .number,
+.more .growth .text .number {
+  font-size: calc(var(--fs-par) * 2);
+  font-weight: var(--fw-bold);
+  color: var(--num-headings);
+  line-height: 1;
+}
+.more .reviving .text .title,
+.more .top .text .title,
+.more .growth .text .title {
+  font-size: 1.125rem;
+  font-weight: var(--fw-extraBold);
+  color: var(--news-bg);
+}
+.more .reviving .text .title:hover,
+.more .top .text .title:hover,
+.more .growth .text .title:hover {
+  color: var(--news-headings);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.more .reviving .text .desc,
+.more .top .text .desc,
+.more .growth .text .desc {
+  font-size: var(--fs-par);
+  color: var(--nav-options);
+}
+
+body {
+  background-color: var(--bg);
+}
+
+.news {
+  display: grid;
+  row-gap: 4rem;
+  padding-block: 2rem 5rem;
+  padding-inline: 1rem;
 }
 
 @media screen and (min-width: 1000px) {
+  .container {
+    padding-block: 5.5rem 8rem;
+    padding-inline: 10rem;
+  }
   .news {
-    display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 2rem;
+    row-gap: 4.5rem;
+    padding-top: 3.5rem;
   }
   .masthead {
     grid-column: 1/3;

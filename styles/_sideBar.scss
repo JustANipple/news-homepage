@@ -3,11 +3,17 @@
     font-family: var(--ff-Inter);
     color: var(--bg);
     display: grid;
-    padding: 1.5rem;
+    padding-inline: 1.5rem;
+    padding-block: 2rem 0;
 
     h2 {
         font-size: calc(var(--fs-par) * 2);
         color: var(--news-headings);
+        line-height: 1;
+
+        @media screen and (min-width: 700px) {
+            font-size: calc(var(--fs-par) * 2.75);
+        }
     }
 
     .topics {
@@ -15,10 +21,10 @@
         .article {
             display: grid;
             row-gap: 0.5rem;
-            padding-block: 2rem;
+            padding-block: 1.75rem;
 
             &:not(:last-child) {
-                border-bottom: 1px solid var(--bg);
+                border-bottom: 1px solid var(--nav-options);
             }
 
             .title:hover {
@@ -30,6 +36,7 @@
             .desc {
                 color: var(--num-headings);
                 font-size: var(--fs-par);
+                line-height: 1.75;
             }
         }
     }

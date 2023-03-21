@@ -3,11 +3,30 @@
 @use "navBar";
 @use "masthead";
 @use "sideBar";
+@use "more";
+
+body {
+    background-color: var(--bg);
+}
+
+.news {
+    display: grid;
+    row-gap: 4rem;
+    padding-block: 2rem 5rem;
+    padding-inline: 1rem;
+}
 
 @media screen and (min-width: 1000px) {
+    .container {
+        padding-block: 5.5rem 8rem;
+        padding-inline: 10rem;
+    }
+
     .news {
-        display: grid;
         grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 2rem;
+        row-gap: 4.5rem;
+        padding-top: 3.5rem;
     }
 
     .masthead {
