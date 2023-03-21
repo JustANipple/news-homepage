@@ -186,7 +186,7 @@ p, h1, h2, h3, h4, h5, h6 {
     row-gap: 2rem;
   }
   .masthead .main-img {
-    background-image: url(/assets/images/image-web-3-desktop.jpg);
+    background-image: url(../assets/images/image-web-3-desktop.jpg);
     grid-column: 1/-1;
   }
   .masthead .content {
